@@ -1,0 +1,249 @@
+@import "reset";
+$primary: #4985ff;
+$white: #fff;
+$dark: #323232;
+$grey: #999999;
+$fs: 16px;
+$baseAlign: center;
+
+@mixin flex($justify: flex-start) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+@mixin mainCol {
+  width: 1100px;
+  margin: 0 auto;
+}
+// header styles
+header {
+  border-bottom: 1px solid #4a5d8380;
+  height: 100px;
+  // opacity: 0.5;
+  // background: $primary;
+  position: relative;
+  z-index: 2;
+  @include flex(center);
+  nav.navigation {
+    @include flex(flex-end);
+    @include mainCol();
+    .nav-link {
+      color: $white;
+      font-weight: 500;
+      font-size: $primary;
+      line-height: $fs * 1.25;
+      margin-right: 40px;
+      position: relative;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 2px;
+          width: calc(100% + 40px);
+          left: -20px;
+          bottom: -40px;
+          background: $white;
+        }
+      }
+    }
+  }
+}
+// first section
+#main {
+  height: 900px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(./Rectangle.png);
+  position: relative;
+  top: -100px;
+}
+
+#main {
+  h1 {
+    position: absolute;
+    color: $white;
+    width: 400px;
+    height: 111px;
+    left: 500px;
+    top: 359px;
+    text-align: center;
+  }
+
+  p {
+    position: absolute;
+    width: 730px;
+    height: 41px;
+    left: 355px;
+    top: 305px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.block {
+  position: absolute;
+  border-radius: 30px;
+  background: $primary;
+  width: 200px;
+  height: 45px;
+  left: 620px;
+  top: 520px;
+
+  h4 {
+    // position: absolute;
+    color: $white;
+    height: 18;
+    // width: 185px;
+    left: 896px;
+    // top: 533px;
+    text-align: center;
+    padding: 13.5px;
+  }
+}
+
+.block2 {
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+
+  .theme {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    color: $dark;
+  }
+}
+.lorem {
+  display: flex;
+  width: 33%;
+}
+
+.lorem2 {
+  display: flex;
+  /* width: 150px; */
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 20px;
+
+  p {
+    padding-top: 20px;
+
+    color: darkgrey;
+  }
+}
+
+#center {
+  // border: 1px solid #E0E0E0;
+  // box-sizing: border-box;
+  display: flex;
+  // flex-direction: row;
+  margin: 0 auto;
+  width: 1000px;
+  // position: relative;
+
+  .eclipse-white {
+    width: 100px;
+    height: 85px;
+    //     position: absolute;
+    // width: 110px;
+    // height: 110px;
+    // left: 405px;
+    // top: 1259px;
+    border: 1px solid #e0e0e0;
+    // justify-content: space-around;
+    margin: auto;
+    // top: 1269px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+
+    .eclipse-blue {
+      width: 80px;
+      height: 80px;
+      //     position: absolute;
+      // width: 110px;
+      // height: 110px;
+      // left: 405px;
+      // top: 1259px;
+      border: 1px solid blue;
+      // justify-content: space-around;
+      margin: auto;
+      // top: 1269px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
+
+      .pr {
+        width: 35px;
+        height: 40px;
+        margin: auto;
+      }
+    }
+  }
+}
+.block_down {
+  position: absolute;
+  border-radius: 30px;
+  background: $primary;
+  width: 200px;
+  height: 45px;
+  left: 620px;
+  top: 1453px;
+  h4 {
+    // position: absolute;
+    color: $white;
+    height: 18;
+    // width: 185px;
+    left: 896px;
+    // top: 533px;
+    text-align: center;
+    padding: 13.5px;
+  }
+}
+.pink {
+  display: flex;
+  // margin: 0 auto;
+  // position: relative;
+  width: 100%;
+  height: 797px;
+  background-color: #e5e5e5;
+  margin-top: 200px;
+  p {
+    color: grey;
+    position: absolute;
+    width: 489px;
+    height: 117px;
+    left: 405px;
+    top: 1883px;
+  }
+  h2 {
+    width: 270px;
+    margin: 160px;
+  }
+  #cartoon {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    // left: 1015px;
+    top: 1703px;
+    right: 270px;
+  }
+}
